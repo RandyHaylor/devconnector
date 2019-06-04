@@ -6,7 +6,7 @@ const app = express();
 //Connect Database
 connectDB();
 
-// Init Middleware
+// Init Middleware to parse json formatted POST bodies
 app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) => res.send('API Running'));
